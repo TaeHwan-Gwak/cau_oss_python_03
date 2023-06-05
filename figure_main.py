@@ -1,5 +1,3 @@
-# %%
-
 import figure
 
 myline = figure.line(10, 20)
@@ -11,14 +9,18 @@ try:
 except ValueError:
     print("please input positive number for width and height")
 
+myline.set_length(20, 30)
+width, height = myline.get_length()
 try:
-    ellipse = figure.area_ellipse(width, height)
-    print(ellipse)
+    triangle = figure.area_right_triangle(width, height)
+    print(triangle)
 except ValueError:
     print("please input positive number for width and height")
 
+myline.set_length(30, 40)
+width, height = myline.get_length()
 try:
-    right_triangle = figure.area_right_triangle(width, height)
-    print(right_triangle)
+    eclipse = figure.area_eclipse(width, height)
+    print(eclipse)
 except ValueError:
     print("please input positive number for width and height")
